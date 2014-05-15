@@ -3,7 +3,7 @@ $(document).ready(function(){
 	var questionNum = prompt("Pick a number for Fizzbuzz");
 	questionNum = +questionNum;
 	var isFizzBuzz = function(x) {
-		for(i=0;i<=x;i++){
+		for(i=1;i<=x;i++){
 			var isDivisableBy3 = (i%3===0);
 			var isDivisableBy5 = (i%5===0);
 			var output;
