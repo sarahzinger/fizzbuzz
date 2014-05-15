@@ -1,20 +1,25 @@
 
 $(document).ready(function(){
 	for(i=1;i<=100;i++){
-		if(i%3===0&&i%5===0){
-			$("body").append("<div>"+ "fizzbuzz" +"</div>");
-		} else {
-			if(i%3===0){
-				$("body").append("<div>"+ "fizz" +"</div>");} 
-				else {
-					if(i%5===0){
-						$("body").append("<div>"+ "buzz"+"</div>");
-					}else{
-						$("body").append("<div>"+ i+"</div>");
-					}
-				}
-			}
+		var isDivisableBy3 = (i%3===0);
+		var isDivisableBy5 = (i%5===0);
+
+		var output;
+
+		if(isDivisableBy3&&isDivisableBy5){
+			output = "FizzBuzz";
 		}
+		else if(isDivisableBy3){
+			output = "Fizz";
+		}
+		else if(isDivisableBy5){
+			output = "Buzz";
+		}
+		else{
+			output = i;
+		}
+		$("body").append("<div>"+ output +"</div>");
 	}
-);
+
+});
 
